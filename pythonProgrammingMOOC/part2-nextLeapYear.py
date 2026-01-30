@@ -14,4 +14,10 @@
 
 # The course has been focusing on simple loops and utilizing if/else statements while I could continue this
 # trend, I opted to accelerate things and start to include functions. In this case I'll be including a 
-#function to check if the year entered is a leap year.
+# function to check if the year entered is a leap year.
+
+def is_leap_year(year):
+  print(f"You passed the year, {year}")
+
+year = int(input("Year: "))
+is_leap_year(year)
