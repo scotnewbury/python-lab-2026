@@ -13,13 +13,29 @@
 # Please type in a word: end
 # Once upon a time there was a girl
 
+# Part 2
+# Change the program so that the loop ends also if the user types in the same word twice in a row.
+
+# Sample output
+# Please type in a word: It
+# Please type in a word: was
+# Please type in a word: a
+# Please type in a word: dark
+# Please type in a word: and
+# Please type in a word: stormy
+# Please type in a word: night
+# Please type in a word: night
+# It was a dark and stormy night
+
 words = ""
 
 word = input("Please type in a word: ")
 
-while word != end:
+while word != "end":
   words = words + " " +  word
   word = input("Please type in a word: ")
+  if word == words.split()[-1]:
+    break
 
 print(words)
 
