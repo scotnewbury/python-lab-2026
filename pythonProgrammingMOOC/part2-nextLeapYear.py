@@ -22,22 +22,21 @@
 #
 # year: integer
 # retun: boolean
-def is_leap_year(year):
-  if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-    return True
-  else:
-    return False
+def is_leap_year(year: int) -> bool:
+  return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
 
 # Get the year from the user, cast it as an integer
-year = int(input("Year: "))
+while True:
+  try:
+    year = int(input("Year: "))
+    break  # Exit loop, entry valid
+  except ValueError:
+    print("Invalid input. Please enter a valid integer.")
+
 # Set our next leap year variable to the same year
 next_leap_year = year
 
-# Let's calulate the next leap year
-# Take the modulo 4 of the year, subtract it from 4, add it to the year the user provided 
-# nextLeapYear = year + (4 - (year % 4))
-
-# Check if the next_leap_year is a leap year if not, add one and retest
+# Determine the next leap year
 while True:
   if (is_leap_year(next_leap_year) and year != next_leap_year):
     break
@@ -46,11 +45,3 @@ while True:
 
 # Print the result
 print(f"The next leap year after {year} is {next_leap_year}")
-
-# # Did we calucate a vaild Leap Year?
-# if isLeapYear(nextLeapYear):
-#   # If we did
-#   print(f"The next leap year after {year} is {next_leap_year}")
-# else:
-#   # if we didn't, add four for the next Leap Year
-#   print(f"The next leap year after {year} is {next_leap_year+4}")
