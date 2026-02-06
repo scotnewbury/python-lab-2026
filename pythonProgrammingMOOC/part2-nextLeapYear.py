@@ -22,8 +22,8 @@
 #
 # year: integer
 # retun: boolean
-def is_leap_year(year: int) -> bool:
-  return (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0)
+
+from utility import is_leap_year
 
 # Get the year from the user, cast it as an integer
 while True:
@@ -33,12 +33,12 @@ while True:
   except ValueError:
     print("Invalid input. Please enter a valid integer.")
 
-# Set our next leap year variable to the same year
-next_leap_year = year
+# Set our next leap year variable one more than the current year to start the loopo
+next_leap_year = year + 1
 
 # Determine the next leap year
 while True:
-  if (is_leap_year(next_leap_year) and year != next_leap_year):
+  if (is_leap_year(next_leap_year)):
     break
   else:
     next_leap_year += 1
