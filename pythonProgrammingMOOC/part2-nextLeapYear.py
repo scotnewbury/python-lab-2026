@@ -25,23 +25,24 @@
 
 from utility import is_leap_year
 
-# Get the year from the user, cast it as an integer
-while True:
-  try:
-    year = int(input("Year: "))
-    break  # Exit loop, entry valid
-  except ValueError:
-    print("Invalid input. Please enter a valid integer.")
+if __name__ == "__main__":
+  # Get the year from the user, cast it as an integer
+  while True:
+    try:
+      year = int(input("Year: "))
+      break  # Exit loop, entry valid
+    except ValueError:
+      print("Invalid input. Please enter a valid integer.")
 
-# Set our next leap year variable one more than the current year to start the loopo
-next_leap_year = year + 1
+  # Set our next leap year variable one more than the current year to start the loopo
+  next_leap_year = year + 1
 
-# Determine the next leap year
-while True:
-  if (is_leap_year(next_leap_year)):
-    break
-  else:
-    next_leap_year += 1
+  # Determine the next leap year
+  while True:
+    if (is_leap_year(next_leap_year)):
+      break
+    else:
+      next_leap_year += 1
 
-# Print the result
-print(f"The next leap year after {year} is {next_leap_year}")
+  # Print the result
+  print(f"The next leap year after {year} is {next_leap_year}")
