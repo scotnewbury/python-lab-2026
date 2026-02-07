@@ -13,7 +13,11 @@
 print ("Please type in integer numbers. Type in 0 to finish.")
 
 if __name__ == "__main__":
+  number = 0
   number_count = 0
+  positive = 0
+  negative = 0
+  mean = 0
   sum = 0
 
   while True:
@@ -21,8 +25,15 @@ if __name__ == "__main__":
     if number != 0:
       number_count += 1
       sum = sum + number
+      if number > 0:
+        positive += 1
+      else:
+        negative += 1
     else:
       break
-
-print(f"Numbers typed in {number_count}")
-print(f"The sum of the numbers is {sum}")
+  mean = sum / number_count
+  print(f"Numbers typed in {number_count}")
+  print(f"The sum of the numbers is {sum}")
+  print(f"The mean of the numbers is {mean}")
+  print(f"Positive numbers {positive}")
+  print(f"Negative numbers {negative}")
