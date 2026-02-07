@@ -14,12 +14,15 @@ print ("Please type in integer numbers. Type in 0 to finish.")
 
 if __name__ == "__main__":
   number_count = 0
+  sum = 0
 
   while True:
     number = int(input("Number: "))
     if number != 0:
       number_count += 1
+      sum = sum + number
     else:
       break
 
 print(f"Numbers typed in {number_count}")
+print(f"The sum of the numbers is {sum}")
