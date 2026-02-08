@@ -53,7 +53,6 @@ print ("Please type in integer numbers. Type in 0 to finish.")
 number = 0
 number_count = 0
 positive = 0
-mean = 0
 sum = 0
 
 while True:
@@ -65,9 +64,9 @@ while True:
       positive += 1
   else:
     break
-mean = sum / number_count
+
 print(f"Numbers typed in {number_count}")
 print(f"The sum of the numbers is {sum}")
-print(f"The mean of the numbers is {mean}")
+print(f"The mean of the numbers is {sum / number_count}")
 print(f"Positive numbers {positive}")
 print(f"Negative numbers {number_count - positive}")
