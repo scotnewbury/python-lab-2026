@@ -4,7 +4,9 @@ def is_leap_year(year: int) -> bool:
 def get_integer_from_user(prompt: str) -> int:
   while True:
     try:
-      number = int(input(prompt))
-      return(number)
+      number = input(prompt)
+      if not number:
+        number = 0
+      return(int(number))
     except ValueError:
       print("Invalid input. Please enter a valid integer.")

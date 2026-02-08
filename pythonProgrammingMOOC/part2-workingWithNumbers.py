@@ -50,7 +50,7 @@
 
 from utility import get_integer_from_user
 
-print ("Please type in integer numbers. Type in 0 to finish.")
+print ("Please type in integer numbers. Type in 0 or just hit enter to finish.")
 
 number = 0
 number_count = 0
