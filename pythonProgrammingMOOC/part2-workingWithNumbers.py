@@ -56,7 +56,14 @@ positive = 0
 sum = 0
 
 while True:
-  number = int(input("Number: "))
+  # Get an integer from the user, check for valid input
+  while True:
+    try:
+      number = int(input("Number: "))
+      break
+    except ValueError:
+      print("Invalid input. Please enter a valid integer.")
+
   if number != 0:
     number_count += 1
     sum = sum + number
@@ -67,6 +74,9 @@ while True:
 
 print(f"Numbers typed in {number_count}")
 print(f"The sum of the numbers is {sum}")
-print(f"The mean of the numbers is {sum / number_count}")
+if number_count:
+  print(f"The mean of the numbers is {sum / number_count}")
+else:
+  print("Cannot calculate mean, division by zero.")
 print(f"Positive numbers {positive}")
 print(f"Negative numbers {number_count - positive}")
