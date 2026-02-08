@@ -50,31 +50,32 @@
 
 from utility import get_integer_from_user
 
-print ("Please type in integer numbers. Type in 0 or just hit enter to finish.")
+if __name__ == "__main__":
+  print ("Please type in integer numbers. Type in 0 or just hit enter to finish.")
 
-number = 0
-number_count = 0
-positive = 0
-total = 0
+  number = 0
+  number_count = 0
+  positive = 0
+  total = 0
 
-while True:
-  # Get an integer from the user, check for valid input
-  number = get_integer_from_user("Number: ")
+  while True:
+    # Get an integer from the user, check for valid input
+    number = get_integer_from_user("Number: ")
 
-  if number == 0:
-    break
+    if number == 0:
+      break
     number_count += 1
     total = total + number
     if number > 0:
       positive += 1
 
-print(f"Numbers typed in {number_count}")
-print(f"The total of the numbers is {total}")
+  print(f"Numbers typed in {number_count}")
+  print(f"The total of the numbers is {total}")
 
-if number_count:
-  print(f"The mean of the numbers is {total / number_count}")
-else:
-  print("Cannot calculate mean, division by zero.")
+  if number_count:
+    print(f"The mean of the numbers is {total / number_count}")
+  else:
+    print("Cannot calculate mean, division by zero.")
 
-print(f"Positive numbers {positive}")
-print(f"Negative numbers {number_count - positive}")
+  print(f"Positive numbers {positive}")
+  print(f"Negative numbers {number_count - positive}")
