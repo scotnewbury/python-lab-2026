@@ -13,22 +13,18 @@ from utility import get_integer_from_user
 
 def main():
 
-  total = 0
+  total = 1
   count = 1
-  sum_string = "The consecutive sum: "
-  limit = get_integer_from_user("Upper limit: ")
+  numbers = "1"
+  limit = get_integer_from_user("Limit: ")
 
   while total < limit:
-    if count == 1:
-      sum_string += f"{count} "
-    else:
-      sum_string += f"+ {count} "
-    total += count
     count += 1
+    total += count
+    numbers += f" + {count}"
     
-
-  sum_string += f"= {total}"
-  print(sum_string)
+    
+  print(f"The consecutive sum: {numbers} = {total}")
 
 
 if __name__ == "__main__":
