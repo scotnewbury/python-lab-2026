@@ -21,7 +21,6 @@ user_word = input("Word: ")
 word_length = len (user_word)
 
 spacing = (30 - word_length) // 2 - 1
-print (spacing)
 
 print ("*" * 30)
 if word_length % 2:
