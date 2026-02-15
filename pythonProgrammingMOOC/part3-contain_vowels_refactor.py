@@ -18,20 +18,16 @@
 def main():
   user_string = input("Please type in a string: ")
 
-  if "a" in user_string:
-    print ("a found")
-  else:
-    print ("a not found")
-
-  if "e" in user_string:
-    print ("e found")
-  else:
-    print ("e not found")
-
-  if "o" in user_string:
-    print ("o found")
-  else:
-    print ("o not found")
+  # Expanding the challenge to include all vowels
+  vowels = "aeiou"
+  vowel = 0 # the index of the vowel we're checking
+  
+  while vowel < len(vowels):
+    if vowels[vowel] in user_string:
+      print (f"{vowels[vowel]} found")
+    else:
+      print (f"{vowels[vowel]} not found")
+    vowel += 1
 
 if __name__ == "__main__":
   main()
