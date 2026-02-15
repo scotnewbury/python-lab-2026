@@ -20,14 +20,15 @@ def main():
 
   # Expanding the challenge to include all vowels
   vowels = "aeiou"
-  vowel = 0 # the index of the vowel we're checking
+  index = 0 # the index of the vowel we're checking
   
-  while vowel < len(vowels):
-    if vowels[vowel] in user_string:
-      print (f"{vowels[vowel]} found")
+  while index < len(vowels):
+    vowel = vowels[index]
+    if vowel in user_string:
+      print (f"{vowel} found")
     else:
-      print (f"{vowels[vowel]} not found")
-    vowel += 1
+      print (f"{vowel} not found")
+    index += 1
 
 if __name__ == "__main__":
   main()
