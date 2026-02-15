@@ -8,3 +8,12 @@
 # te
 # tes
 # test
+
+user_string = input("Please type in a string: ")
+
+string_index = 1
+
+while string_index <= len(user_string):
+  print(user_string[:string_index])
+  string_index += 1
+
