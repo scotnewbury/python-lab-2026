@@ -14,3 +14,20 @@
 # a found
 # e not found
 # o not found
+
+user_string = input("Please type in a string: ")
+
+if "a" in user_string:
+  print ("a found")
+else:
+  print ("a not found")
+
+if "e" in user_string:
+  print ("e found")
+else:
+  print ("e not found")
+
+if "o" in user_string:
+  print ("o found")
+else:
+  print ("o not found")
