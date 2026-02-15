@@ -19,7 +19,7 @@ def main():
   user_string = input("Please type in a string: ")
 
   # Expanding the challenge to include all vowels
-  vowels = "aeiou"
+  vowels = "aeiouAEIOU"
   index = 0 # the index of the vowel we're checking
   
   while index < len(vowels):
