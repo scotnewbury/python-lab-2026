@@ -24,3 +24,13 @@
 # Sample output
 # Please type in a word: python
 # Please type in a character: n
+
+user_string = input ("Please type in a word: ")
+user_character = input ("Please type in a character: ")
+
+index = user_string.find(user_character)
+if index >= 0 and index + 3 <= len(user_string):
+  print (user_string[index:index + 3])
+
+
+
