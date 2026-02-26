@@ -44,12 +44,18 @@
 # Please type in a character: n
 # nan
 
+# Hard coded values for testing
+# user_string = "mammoth"
+# user_character = "m"
+
 user_string = input ("Please type in a word: ")
 user_character = input ("Please type in a character: ")
 
-index = user_string.find(user_character)
-if index >= 0 and index + 3 <= len(user_string):
-  print (user_string[index:index + 3])
 
-
-
+while True:
+  index = user_string.find(user_character)
+  if index >= 0 and index + 3 <= len(user_string):
+    print (user_string[index:index + 3])
+    user_string = user_string[index+1:]
+  else:
+    break
